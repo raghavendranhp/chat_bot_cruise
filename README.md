@@ -11,7 +11,10 @@ The system utilizes a "Two-Brain" architecture orchestrated by a central router:
 3.  **Unstructured Engine (The Right Brain):** Uses FAISS vector search and HuggingFace embeddings to retrieve context from brochures, itineraries, and FAQs.
 4.  **Extractor:** Converts natural language queries into strict JSON schemas for accurate data querying.
 
+
 ## Folder Structure
+
+```text
 seshat_cruise_control/
 │
 ├── config/                     # [Prompts] Brain instructions
@@ -35,7 +38,6 @@ seshat_cruise_control/
 ├── .env                        # API keys configuration
 ├── build_kb.py                 # Script to ingest text data
 └── app.py                      # Streamlit User Interface
-
 
 ## Prerequisites
 - Python 3.10+
