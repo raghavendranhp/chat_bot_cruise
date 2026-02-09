@@ -13,22 +13,29 @@ The system utilizes a "Two-Brain" architecture orchestrated by a central router:
 
 ## Folder Structure
 seshat_cruise_control/
-├── config/                  # System prompts and instructions
-│   ├── extractor_prompt.txt
-│   └── synthesizer_prompt.txt
-├── data/                    # Knowledge base
-│   ├── structured/          # Contains Egypt_Cruise_Dataset.csv
-│   └── unstructured/        # Contains brochures, itineraries (.txt)
-├── src/                     # Core logic
-│   ├── models.py            # Pydantic JSON schemas
-│   ├── extractor.py         # LLM Intent extraction
-│   ├── structured_ops.py    # CSV filtering logic
-│   ├── unstructured_ops.py  # Vector search logic
-│   ├── orchestrator.py      # Main control flow
-│   └── vector_store.py      # FAISS database handler
-├── build_kb.py              # Script to ingest text data
-├── app.py                   # Streamlit User Interface
-└── .env                     # API keys configuration
+│
+├── config/                     # [Prompts] Brain instructions
+│   ├── extractor_prompt.txt    # Rules for extracting JSON from queries
+│   └── synthesizer_prompt.txt  # Rules for final polite answer generation
+│
+├── data/                       # [Knowledge Base]
+│   ├── structured/             # Place 'Egypt_Cruise_Dataset.csv' here
+│   └── unstructured/           # Place brochures, itineraries (.txt) here
+│
+├── src/                        # [Logic Core]
+│   ├── __init__.py             # Makes 'src' a Python package
+│   ├── models.py               # Pydantic JSON schemas
+│   ├── extractor.py            # LLM Intent extraction
+│   ├── structured_ops.py       # CSV filtering logic
+│   ├── unstructured_ops.py     # Vector search logic
+│   ├── orchestrator.py         # Main control flow
+│   └── vector_store.py         # FAISS database handler
+│
+├── vector_db/                  # (Created automatically by build_kb.py)
+├── .env                        # API keys configuration
+├── build_kb.py                 # Script to ingest text data
+└── app.py                      # Streamlit User Interface
+
 
 ## Prerequisites
 - Python 3.10+
