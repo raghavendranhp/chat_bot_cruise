@@ -22,8 +22,8 @@ seshat_cruise_control/
 │   └── synthesizer_prompt.txt  # Rules for final polite answer generation
 │
 ├── data/                       # [Knowledge Base]
-│   ├── structured/             # Place 'Egypt_Cruise_Dataset.csv' here
-│   └── unstructured/           # Place brochures, itineraries (.txt) here
+│   ├── structured/             # 'Egypt_Cruise_Dataset.csv' here
+│   └── unstructured/           # brochures, itineraries (.txt) here
 │
 ├── src/                        # [Logic Core]
 │   ├── __init__.py             # Makes 'src' a Python package
@@ -34,7 +34,7 @@ seshat_cruise_control/
 │   ├── orchestrator.py         # Main control flow
 │   └── vector_store.py         # FAISS database handler
 │
-├── vector_db/                  # (Created automatically by build_kb.py)
+├── vector_db/                  # (Created automatically by build_db.py)
 ├── .env                        # API keys configuration
 ├── build_kb.py                 # Script to ingest text data
 └── app.py                      # Streamlit User Interface
