@@ -38,7 +38,7 @@ seshat_cruise_control/
 ├── .env                        # API keys configuration
 ├── build_kb.py                 # Script to ingest text data
 └── app.py                      # Streamlit User Interface
-
+```
 ## Prerequisites
 - Python 3.10+
 - Groq Cloud API Key
